@@ -209,21 +209,49 @@
     }
 }
 
-@media only screen and (max-width: 768px){
-    .navbar {
-        padding: .7rem 2rem;
+@media only screen and (max-width: 767px){
+    .justify-content-md-center{
+        justify-content: center;
+    }
+
+    .single-brand {
+        width: 7rem;
+        padding-top: 1.m;
+        height: 4rem;
+    }
+
+    .services-area .services {
+        width: 26rem;
+        height: 20rem;
     }
 }
 
-@media only screen and (max-width: 1024px){
-    .single-brand{
-        margin: 2rem;
+@media only screen and (max-width: 990px){
+    .navbar {
+        padding: .7rem 2rem;
     }
+
+}
+
+@media only screen and (min-width:768px) and (max-width: 990px){
+    .single-brand{
+        width: 10rem;
+        padding-top: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
 
     .services-area .services {
         width: 12rem;
         overflow: hidden;
     }
 
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1199px){
+    .services-area .services{
+        width: 14rem;
+    }
 }
 

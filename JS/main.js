@@ -1,3 +1,17 @@
+const cv = document.querySelector('.cv')
+
+function openCV() {
+    cv.style.display = 'grid';
+}
+
+function closeCV() {
+    cv.style.display = 'none';
+}
+
+
+
+
+
 $(document).ready(function () {
 
     let btns = $('.project-area .button-group button');
