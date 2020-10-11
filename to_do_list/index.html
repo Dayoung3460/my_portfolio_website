@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible">
+        <title>To do list</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+
+    </head>
+    <body>
+
+        <div class="todolist">
+            <div class="cover">
+                <div class="title">
+                    <h3>Work</h3>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Checked</option>
+                            <option value="deleted">Trash</option>
+                        </select>
+                    </div>
+                    <button>remove all</button>
+                </div>
+
+            </div>
+            <div class="content">
+                <form action="" class="add">
+                    <div>
+                        <input type="text" name="add" placeholder="Make yourself busy!" class="input" autofocus>
+                        <span class="addBtn">
+                            <a href="" class="plusBtn">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                        </span>
+                    </div>
+                </form>
+                <ul class="lists"></ul>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: linear-gradient(
+    120deg,
+    #d3a5dc,
+    #a77dcc,
+    hsl(278, 52%, 41%),
+    #612486
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Lemonada", cursive;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todolist {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 20px 20px 2px rgba(62, 9, 11, 0.3);
+  margin: 20px 0;
+}
+
+.cover .title {
+  background: url("./image/office.png");
+  height: 200px;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: "Rowdies", cursive;
+  color: white;
+  text-shadow: 10px 10px #520d63;
+  position: relative;
+  text-align: center;
+}
+
+.cover .title h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.content {
+  height: 300px;
+  padding: 30px;
+  overflow-y: scroll;
+  overflow-x: initial;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+.content form {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 25px 0;
+  font-size: 2rem;
+  width: 350px;
+}
+
+.content form input {
+  border-style: none;
+  border-bottom: 1px solid #520d63;
+  width: 300px;
+  outline: none;
+}
+
+.content form .addBtn a {
+  color: inherit;
+}
+
+.content form > * {
+  border: none;
+  height: 40px;
+}
+
+.content input[type="text"] {
+  padding: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #520d63;
+}
+
+.content input::placeholder {
+  color: var(--c, #f1e2f3);
+}
+
+.content .lists {
+  overflow: auto;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.content .lists li {
+  padding: 3px;
+}
+
+.content .lists li button {
+  float: right;
+  cursor: pointer;
+  margin-top: 0.4em;
+  margin-left: .7em;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.content .lists li .trash:hover {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.content .lists li .completed:hover {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.content ul {
+  list-style-type: none;
+}
+
+.content ul label {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.content input[type="checkbox"] + label:hover {
+  background-color: #f7f1f8;
+}
+
+.content input[type="checkbox"]:checked + label {
+  color: rgb(180, 176, 201);
+  text-decoration: line-through;
+}
+
+.content input[type="checkbox"] {
+  position: relative;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-right: 0.5em;
+}
+
+.content input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  transition: 0.3s;
+}
+
+.content input:checked[type="checkbox"]::before {
+  border-left: none;
+  border-top: none;
+  width: 13px;
+  height: 20px;
+  border-color: rgb(149, 23, 199);
+  /* border: 3px; */
+  transform: rotate(45deg) translate(0px, -5px);
+}
+
+.fa-trash-alt,
+.fa-check-circle {
+  pointer-events: none;
+}
+
+.slideRemove {
+  transform: translateY(1rem);
+  opacity: 0;
+}
+
+.slideCompleted {
+  transform: translateX(15rem);
+  opacity: 0;
+}
+
+.list {
+  transition: all 0.3s ease;
+}
+
+.todo-item {
+  display: inline-block;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.todo-item:hover{
+  text-overflow: clip;
+    white-space: normal;
+    word-break: break-all;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  width: 4.5rem;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  float: right;
+  top: 83%;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  background-color: blueviolet;
+  padding: 0.2em;
+  font-size: 0.8rem;
+}
+
+.select:hover::after {
+  background-color: black;
+  color: blueviolet;
+}
+
+.title button {
+  display: flex;
+  position: absolute;
+  left: 0.5em;
+  bottom: 0.5em;
+  background: #612486;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+  padding: 0.3em 0.5em;
+  border-radius: 5em;
+  border: none;
+}
+
+.title button:hover {
+  background-color: ivory;
+  color: #612486;
+}
+
+.title button:focus {
+  outline: none;
+}

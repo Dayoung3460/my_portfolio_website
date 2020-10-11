@@ -8,10 +8,6 @@ function closeCV() {
     cv.style.display = 'none';
 }
 
-
-
-
-
 $(document).ready(function () {
 
     let btns = $('.project-area .button-group button');

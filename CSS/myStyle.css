@@ -209,6 +209,25 @@
     filter: brightness(0.2);
 }
 
+.p1{
+    padding-top: .4em;
+}
+
+.p1:hover{
+    
+}
+
+.p1 a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.p1 a p{
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
 
 /* ================Service Area ================*/
 

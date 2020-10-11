@@ -224,6 +224,10 @@
         width: 26rem;
         height: 20rem;
     }
+
+    .p1 a p{
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 990px){
@@ -233,14 +237,18 @@
 
 }
 
-@media only screen and (min-width:768px) and (max-width: 990px){
+@media only screen and (min-width:767px) and (max-width: 990px){
     .single-brand{
         width: 10rem;
         padding-top: 1.2em;
     }
+
+    .p1{
+        padding-top: .4em;
+    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 767px) and (max-width: 1024px){
 
     .services-area .services {
         width: 12rem;
