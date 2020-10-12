@@ -213,10 +213,6 @@
     padding-top: .4em;
 }
 
-.p1:hover{
-    
-}
-
 .p1 a{
     color: inherit;
     text-decoration: none;
@@ -264,6 +260,41 @@
 .services-area .services:hover{
     box-shadow: var(--box-shadow);
 }
+
+.card-body .card-text{
+    overflow-y: auto;
+    height: 11em;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: gray
+  }
+
+.card-body .card-text .btn{
+    margin-top: .7em;
+}
+
+.card-body .card-text .btn a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.card-body .card-text .btn:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-body .card-text .btn a:hover{
+    font-weight: 800;
+}
+
 
 
 /* =================Project Area =================*/

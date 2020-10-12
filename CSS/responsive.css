@@ -228,6 +228,14 @@
     .p1 a p{
         font-size: 1rem;
     }
+
+    .card-body{
+        height: 10.55em;
+    }
+
+    .card-body .card-text{
+        height: 6em;
+    }
 }
 
 @media only screen and (max-width: 990px){

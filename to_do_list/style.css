@@ -128,7 +128,7 @@ body {
   padding: 3px;
 }
 
-.content .lists li button {
+.content .lists li .removeAll {
   float: right;
   cursor: pointer;
   margin-top: 0.4em;
@@ -266,7 +266,7 @@ select {
   color: blueviolet;
 }
 
-.title button {
+.title .removeAll {
   display: flex;
   position: absolute;
   left: 0.5em;
@@ -282,11 +282,29 @@ select {
   border: none;
 }
 
-.title button:hover {
+.title .removeAll:hover {
   background-color: ivory;
   color: #612486;
 }
 
-.title button:focus {
+.title .removeAll:focus {
   outline: none;
 }
+
+.title .github{
+    display: flex;
+    position: absolute;
+    right: 3.7em;
+    bottom: 0.2em;
+    font-size: 1.7rem;
+}
+
+.title .github a{
+  font-size: 1.5rem;
+}
+
+.title .github button{
+  background-color: transparent;
+  border: none;
+}
+
