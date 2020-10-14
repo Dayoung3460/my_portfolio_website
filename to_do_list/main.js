@@ -5,7 +5,7 @@ const form = document.querySelector("form");
 const addBtn = document.querySelector(".addBtn");
 const lists = document.querySelector(".lists");
 const filterOption = document.querySelector("select");
-const removeAllBtn = document.querySelector("button");
+const removeAllBtn = document.querySelector(".removeAll");
 const option = document.getElementsByTagName("option");
 
 document.addEventListener("DOMContentLoaded", getTodos);

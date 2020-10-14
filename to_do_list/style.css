@@ -128,7 +128,7 @@ body {
   padding: 3px;
 }
 
-.content .lists li .removeAll {
+.content .lists li button {
   float: right;
   cursor: pointer;
   margin-top: 0.4em;
@@ -198,7 +198,6 @@ body {
   width: 13px;
   height: 20px;
   border-color: rgb(149, 23, 199);
-  /* border: 3px; */
   transform: rotate(45deg) translate(0px, -5px);
 }
 
