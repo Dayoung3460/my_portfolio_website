@@ -28,6 +28,27 @@ body {
   height: 100%;
 }
 
+.github {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.github:hover {
+  transform: scale(1.1);
+}
+
+.github button {
+  background-color: transparent;
+  border: none;
+}
+
+.github a {
+  font-size: 2rem;
+}
+
 .logoCon {
   display: flex;
   justify-content: center;

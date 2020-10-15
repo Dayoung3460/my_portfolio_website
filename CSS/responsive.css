@@ -208,7 +208,7 @@
     justify-content: center;
     flex-direction: column;
   }
-  
+
   .justify-content-md-center {
     display: flex;
     align-content: center;
@@ -249,15 +249,9 @@
 @media only screen and (min-width: 767px) and (max-width: 990px) {
   .single-brand {
     width: 10rem;
-    padding-top: 1.2em;
+    
   }
 
-  .p1 {
-    padding-top: 0.4em;
-  }
-  .p2 {
-    padding-top: 0em;
-  }
   .p2 a {
     font-size: 0.9rem;
   }

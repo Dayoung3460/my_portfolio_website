@@ -182,7 +182,6 @@
   justify-content: center;
   border: 3px solid var(--border-color);
   text-align: center;
-  padding-top: 1rem;
   margin: 2rem auto;
   width: 200px;
   height: 80px;
@@ -194,6 +193,13 @@
   width: 70%;
 }
 
+.single-brand a {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
 .single-brand:hover {
   box-shadow: var(--box-shadow);
   transform: scale(1.1);
@@ -201,13 +207,6 @@
 
 .single-brand:hover img {
   filter: brightness(0.2);
-}
-
-.p1 {
-  padding-top: 0.4em;
-}
-.p2 {
-  padding-top: 0em;
 }
 
 .p1 a,
