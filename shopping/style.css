@@ -17,6 +17,8 @@
   );
   --color-purple: #a00bb4;
   --color-red: #f31313;
+
+  --color-btn: #60a3bc;
 }
 
 * {
@@ -28,10 +30,43 @@ body {
   height: 100%;
 }
 
-.github {
+.topBtns {
   position: absolute;
   top: 15px;
   right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart {
+  margin-right: 1rem;
+  background-color: var(--color-btn);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.cart:hover {
+  background: var(--color-pink);
+  border-radius: 0;
+  transform: scale(1.1);
+}
+
+.cart:hover + a {
+  color: #fff;
+}
+
+.cart a {
+  color: #222;
+  text-decoration: none;
+}
+
+.cart a span {
+  font-weight: 700;
+}
+
+.github {
   cursor: pointer;
   transition: all 0.1s ease;
 }
@@ -187,9 +222,30 @@ body {
 }
 
 .viewCon div span {
-  padding: 10px;
-  margin: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
   font-family: "Vollkorn", serif;
+}
+
+.addCartBtn {
+  margin: 0.2em 1em 0 0.7em;
+  float: right;
+  font-family: "Inconsolata";
+  cursor: pointer;
+  padding: 0.3em 0.5em;
+  border-radius: 0.3em;
+  background: var(--color-btn);
+  transition: all 0.4s ease 0s;
+  border: none;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  outline: none;
+}
+
+.addCartBtn:hover {
+  background: var(--color-pink);
+  color: #fff;
+  border-radius: 0;
 }
 
 /* responsive */
