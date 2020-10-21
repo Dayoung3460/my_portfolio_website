@@ -1,5 +1,5 @@
 // ============================= Load items ========================================
-
+'use strict'
 
 function loadItems(){
     return fetch('data/data.json')
@@ -56,14 +56,14 @@ function setItems(item){
     
     if(cartItems != null){
         // if clicked another item,
-        if(cartItems[item.type] == undefined){
-            cartItems = {...cartItems, [item.type]:item}
+        if(cartItems[item.id] == undefined){
+            cartItems = {...cartItems, [item.id]:item}
         }
-        cartItems[item.type].inCart += 1;
+        cartItems[item.id].inCart += 1;
     } else{
         //if nothing in cartItems,
         item.inCart = 1;
-        cartItems = {[item.type]:item};
+        cartItems = {[item.id]:item};
     }
     
     localStorage.setItem('itemsInCart', JSON.stringify(cartItems));
@@ -116,20 +116,20 @@ function displayCart(){
 
     if(cartItems && items){
         items.innerHTML = '';
-        console.log(items);
+
         Object.values(cartItems).map(cartItem => {
             items.innerHTML += `
                 <div class="products">
                     <div class="product">
                         <i class="fas fa-window-close"></i>
                         <img src=${cartItem.image}>
-                        <span>${cartItem.type}</span>
+                        <span>${cartItem.color} ${cartItem.type}</span>
                     </div>
                     <div class="price">$${cartItem.price}</div>
                     <div class="quantity">
-                        <span><i class="fas fa-sort-up"></i></span>
-                            ${cartItem.inCart}
-                        <span><i class="fas fa-sort-down"></i></span>
+                        <span class="up"><i class="fas fa-sort-up"></i></span>
+                        <span class="value">${cartItem.inCart}</span>
+                        <span class="down"><i class="fas fa-sort-down"></i></span>
                     </div>
                     <div class="total">$${cartItem.price * cartItem.inCart}</div>
                 </div>
@@ -137,11 +137,74 @@ function displayCart(){
         })
         items.innerHTML += `
             <div class="basketCon">
-            <h4 class="basketTitle">Basket Total</h4>
-            <h4 class="basketTotal">${cartCost}</h4>
+                <h4 class="basketTitle">Basket Total</h4>
+                <h4 class="basketTotal">$${cartCost}</h4>
+            </div>
             `
     }
 }
+
+const removeBtns = document.querySelectorAll('.product i');
+function removeItemInCart(){
+    const productsInCart = document.querySelectorAll('.products');
+    let cartCost = localStorage.getItem('totalCost');
+    const totalInCart = document.querySelectorAll('.products .total');
+    const basketTotal = document.querySelector('.basketTotal');
+    let cartItems = localStorage.getItem('itemsInCart');
+    cartItems = JSON.parse(cartItems);
+    // convert object to array
+    let cartItemsAry = Object.keys(cartItems).map(key => [key, cartItems[key]]);
+    let cartNumbers = localStorage.getItem('cartNumbers');
+    cartNumbers = parseInt(cartNumbers);
+    const quantity = document.querySelectorAll('.quantity .value');
+
+    for(let i=0; removeBtns.length; i++){
+        removeBtns[i].addEventListener('click', () => {
+                productsInCart[i].remove();
+                cartCost = parseInt(cartCost);
+                cartCost = cartCost - totalInCart[i].textContent.split("$")[1];
+                basketTotal.textContent = cartCost; 
+
+                const removedId = cartItemsAry[i][0];
+                delete cartItems[removedId];
+
+                cartNumbers = cartNumbers - parseInt(quantity[i].textContent)
+                cartNumSpan.textContent = cartNumbers;
+
+                const removedCart = {
+                    totalCost: cartCost,
+                    itemInCart: cartItems,
+                    cartNumbers: cartNumSpan.textContent
+                }
+                modifyLocalStorage(removedCart);
+        })
+    }
+}
+
+function modifyLocalStorage(removedCart){
+    let cartItems = localStorage.getItem('itemsInCart');
+    cartItems = JSON.stringify(removedCart.itemInCart);
+
+    localStorage.setItem('totalCost', removedCart.totalCost);
+    localStorage.setItem('itemsInCart', cartItems);
+    localStorage.setItem('cartNumbers', removedCart.cartNumbers);
+}
+
+function clearAllCart(){
+    localStorage.clear();
+    location.reload();
+}
+
+function QuanUp(){
+    const up = document.querySelector('.up');
+    up.addEventListener('click', () => {
+        const cartNumbers = localStorage.getItem('cartNumbers');
+        cartNumbers = parseInt(cartNumbers);
+        cartNumbers =+ 1;
+    })
+}
+
+// *************** Call functions *******************
 
 loadItems()
 .then(items => {
@@ -153,6 +216,11 @@ loadItems()
 onloadCartNumbers();
 
 displayCart();
+
+removeItemInCart();
+
+QuanUp();
+
 
 
 // ============================= Cart ========================================

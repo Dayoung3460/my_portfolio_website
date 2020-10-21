@@ -258,11 +258,11 @@ body {
 
 .cart-container {
   width: 80%;
-  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 7rem auto 0 auto;
+  margin: 0rem auto;
 }
 
 .header {
@@ -270,42 +270,43 @@ body {
   display: flex;
   justify-content: space-around;
   border-bottom: 0.3rem solid lightgray;
-  padding: 1rem;
+  padding: 0 3rem 0 1rem;
 }
 
 .h-product {
   width: 45%;
   text-align: center;
+  font-family: "Inconsolata";
 }
 
 .h-price {
   width: 20%;
   text-align: center;
+  font-family: "Inconsolata";
 }
 
 .h-quantity {
   width: 25%;
   text-align: center;
+  font-family: "Inconsolata";
 }
 
 .h-total {
   width: auto;
   text-align: center;
+  font-family: "Inconsolata";
 }
 
 .product {
   width: 45%;
   font-size: 1.2rem;
-  margin: 0.1rem 0.1rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
 .price {
   width: 20%;
   font-size: 1.2rem;
-  margin: 0.1rem 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,7 +315,6 @@ body {
 .quantity {
   width: 25%;
   font-size: 1.2rem;
-  margin: 0.1rem 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,7 +323,6 @@ body {
 .total {
   width: auto;
   font-size: 1.2rem;
-  margin: 0.1rem 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,7 +335,7 @@ body {
   justify-content: center;
   align-items: center;
   border-bottom: 0.1rem solid lightgray;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .products {
@@ -347,24 +346,93 @@ body {
   padding: 0.2em 0;
 }
 
-/* .items .products i {
-  color: var(--color-red);
-} */
-
 .product img {
-  width: 35%;
+  width: 10%;
 }
 
-/* .items .products {
+.product i {
+  color: var(--color-red);
+  cursor: pointer;
+  width: 20%;
+}
+
+.product span {
+  font-family: "Vollkorn", serif;
+  width: 50%;
+  text-align: center;
+}
+
+.quantity span {
+  cursor: pointer;
+}
+
+.quantity .up {
+  padding-top: 0.6em;
+}
+
+.quantity .fas {
+  padding: 0 0.3em;
+  font-size: 1.2em;
+}
+
+.basketCon {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  margin: 0.5em 0;
+  padding-right: 7%;
 }
 
-.items .cart-price {
-} */
+.basketCon .basketTitle {
+  padding-right: 9%;
+}
+
+.basketCon .basketTotal {
+  font-size: 1.2rem;
+}
+
+.nextBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.nextBtn button {
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  background-color: var(--color-btn);
+  padding: 1rem;
+}
+
+.nextBtn button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.removeAllBtn {
+  position: absolute;
+  top: 1.5em;
+  left: 0.5em;
+}
+
+.removeAllBtn button {
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  background-color: var(--color-pink);
+  padding: 0.4rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.removeAllBtn button:hover {
+  color: #222;
+}
 
 /* responsive */
 
@@ -378,6 +446,22 @@ body {
 @media only screen and (max-width: 768px) {
   .viewCon {
     columns: 2;
+  }
+
+  .product img {
+    width: 20%;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .header {
+    padding: 0 0.1rem 0 0;
+  }
+
+  .basketCon {
+    height: 2.5rem;
   }
 }
 
