@@ -32,7 +32,7 @@ function createHTMLString(item){
     `; 
 }
 
-const cartNumSpan = document.querySelector('.cart .cartNumSpan');
+let cartNumSpan = document.querySelector('.cart .cartNumSpan');
 
 // give cart number to each item 
 function saveCartNumbers(item){
@@ -144,8 +144,8 @@ function displayCart(){
     }
 }
 
-const removeBtns = document.querySelectorAll('.product i');
 function removeItemInCart(){
+    const removeBtns = document.querySelectorAll('.products .product');
     const productsInCart = document.querySelectorAll('.products');
     let cartCost = localStorage.getItem('totalCost');
     const totalInCart = document.querySelectorAll('.products .total');
@@ -195,13 +195,48 @@ function clearAllCart(){
     location.reload();
 }
 
-function QuanUp(){
-    const up = document.querySelector('.up');
-    up.addEventListener('click', () => {
-        const cartNumbers = localStorage.getItem('cartNumbers');
-        cartNumbers = parseInt(cartNumbers);
-        cartNumbers =+ 1;
-    })
+
+function getQuantity(){
+    // let quantity = document.querySelectorAll('.quantity');
+    const products = document.querySelectorAll('.products');
+
+    for(let i=0; products.length; i++){
+        products[i].addEventListener('click', e => {
+            const up = e.target;
+
+            if(up.classList[1] == 'fa-sort-up'){
+                const parent = up.parentElement;
+                const grandParent = parent.parentElement;
+                const grandGrandParent = grandParent.parentElement;
+                const item = grandGrandParent;
+
+                const productsCount = products.children.length;
+                console.log(productsCount);
+
+
+                // let itemsInCart = localStorage.getItem('itemInCart');
+                // console.log(itemsInCart);
+                
+
+
+
+
+
+
+
+                // let cartNumbers = localStorage.getItem('cartNumbers');
+                // cartNumbers = parseInt(cartNumbers);
+                // cartNumbers++;
+                // localStorage.setItem('cartNumbers', cartNumbers);
+                // cartNumSpan.textContent = cartNumbers;
+                // quantity[i].children[1].textContent = cartNumSpan.textContent;
+    
+                
+    
+           }
+        });
+    }
+    
 }
 
 // *************** Call functions *******************
@@ -217,9 +252,14 @@ onloadCartNumbers();
 
 displayCart();
 
+getQuantity();
+
 removeItemInCart();
 
-QuanUp();
+
+
+
+
 
 
 

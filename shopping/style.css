@@ -463,6 +463,16 @@ body {
   .basketCon {
     height: 2.5rem;
   }
+
+  .removeAllBtn {
+    top: 0.1em;
+    left: 0em;
+    width: 0.3em;
+  }
+
+  .h-product {
+    padding-left: 1.2em;
+  }
 }
 
 @media only screen and (max-width: 532px) {

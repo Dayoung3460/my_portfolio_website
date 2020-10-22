@@ -178,15 +178,24 @@
 
 .single-brand {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  border: 3px solid var(--border-color);
+  border: 0.2rem solid var(--border-color);
+  border-radius: 1rem;
   text-align: center;
   margin: 2rem auto;
   width: 200px;
   height: 80px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.single-brand:hover {
+  box-shadow: var(--box-shadow);
+  transform: scale(1.1);
+  background: #f4f4ff;
+  border-radius: 0rem;
+  border: 0rem;
 }
 
 .single-brand img {
@@ -198,11 +207,6 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-}
-
-.single-brand:hover {
-  box-shadow: var(--box-shadow);
-  transform: scale(1.1);
 }
 
 .single-brand:hover img {
@@ -269,6 +273,8 @@
 .card-body .card-text {
   overflow-y: auto;
   height: 11em;
+  display: flex;
+  flex-direction: column;
 }
 
 ::-webkit-scrollbar {
