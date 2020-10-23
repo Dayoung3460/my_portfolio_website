@@ -145,7 +145,7 @@ function displayCart(){
 }
 
 function removeItemInCart(){
-    const removeBtns = document.querySelectorAll('.products .product');
+    const removeBtns = document.querySelectorAll('.products .product i');
     const productsInCart = document.querySelectorAll('.products');
     let cartCost = localStorage.getItem('totalCost');
     const totalInCart = document.querySelectorAll('.products .total');
@@ -160,22 +160,22 @@ function removeItemInCart(){
 
     for(let i=0; removeBtns.length; i++){
         removeBtns[i].addEventListener('click', () => {
-                productsInCart[i].remove();
-                cartCost = parseInt(cartCost);
-                cartCost = cartCost - totalInCart[i].textContent.split("$")[1];
-                basketTotal.textContent = cartCost; 
-
-                const removedId = cartItemsAry[i][0];
-                delete cartItems[removedId];
-
-                cartNumbers = cartNumbers - parseInt(quantity[i].textContent)
-                cartNumSpan.textContent = cartNumbers;
-
-                const removedCart = {
-                    totalCost: cartCost,
-                    itemInCart: cartItems,
-                    cartNumbers: cartNumSpan.textContent
-                }
+            productsInCart[i].remove();
+            cartCost = parseInt(cartCost);
+            cartCost = cartCost - totalInCart[i].textContent.split("$")[1];
+            basketTotal.textContent = cartCost; 
+        
+            const removedId = cartItemsAry[i][0];
+            delete cartItems[removedId];
+        
+            cartNumbers = cartNumbers - parseInt(quantity[i].textContent)
+            cartNumSpan.textContent = cartNumbers;
+        
+            const removedCart = {
+                totalCost: cartCost,
+                itemInCart: cartItems,
+                cartNumbers: cartNumSpan.textContent
+            }
                 modifyLocalStorage(removedCart);
         })
     }
@@ -194,50 +194,50 @@ function clearAllCart(){
     localStorage.clear();
     location.reload();
 }
+  
+// function getQuantity(){
+//     let quantity = document.querySelectorAll('.quantity .value');
+//     const products = document.querySelectorAll('.products');
+//     const total = document.querySelectorAll('.total');
 
-
-function getQuantity(){
-    // let quantity = document.querySelectorAll('.quantity');
-    const products = document.querySelectorAll('.products');
-
-    for(let i=0; products.length; i++){
-        products[i].addEventListener('click', e => {
-            const up = e.target;
-
-            if(up.classList[1] == 'fa-sort-up'){
-                const parent = up.parentElement;
-                const grandParent = parent.parentElement;
-                const grandGrandParent = grandParent.parentElement;
-                const item = grandGrandParent;
-
-                const productsCount = products.children.length;
-                console.log(productsCount);
-
-
-                // let itemsInCart = localStorage.getItem('itemInCart');
-                // console.log(itemsInCart);
-                
-
-
-
-
-
-
-
-                // let cartNumbers = localStorage.getItem('cartNumbers');
-                // cartNumbers = parseInt(cartNumbers);
-                // cartNumbers++;
-                // localStorage.setItem('cartNumbers', cartNumbers);
-                // cartNumSpan.textContent = cartNumbers;
-                // quantity[i].children[1].textContent = cartNumSpan.textContent;
+//         for(let i=0; products.length; i++){
+//             if(products[i].clicked == true){
+//             products[i].addEventListener('click', e => {
+//                 const up = e.target;
     
-                
+//                 if(up.classList[1] == 'fa-sort-up'){
+//                     const parent = up.parentElement;
+//                     const grandParent = parent.parentElement;
+//                     const grandGrandParent = grandParent.parentElement;
+//                     const item = grandGrandParent;
+//                     // convert nodelist to array
+//                     const productsArr = Array.prototype.slice.call(products);
+//                     const itemIndex = productsArr.indexOf(item);
     
-           }
-        });
-    }
+//                     let itemsInCart = localStorage.getItem('itemsInCart');
+//                     itemsInCart = JSON.parse(itemsInCart);
+//                     // convert object to array
+//                     let itemsInCartArr = Object.keys(itemsInCart).map(key => [key, itemsInCart[key]]);
+//                     const selectedItem = itemsInCartArr[itemIndex];
+//                     let selectedInCart = selectedItem[1].inCart;
+//                     selectedInCart++;
     
-}
+//                     selectedItem[1].inCart = selectedInCart;
+//                     localStorage.setItem('itemsInCart', JSON.stringify(itemsInCart));
+//                     quantity[itemIndex].textContent = selectedItem[1].inCart;
+    
+//                     const totalPrice = selectedItem[1].inCart * selectedItem[1].price;
+//                     total.textContent = totalPrice;
+//                     // to display total cost per item
+//                     location.reload();
+//                }
+               
+//             });
+//         }
+//     }
+    
+    
+// }
 
 // *************** Call functions *******************
 
@@ -252,7 +252,7 @@ onloadCartNumbers();
 
 displayCart();
 
-getQuantity();
+// getQuantity();
 
 removeItemInCart();
 
