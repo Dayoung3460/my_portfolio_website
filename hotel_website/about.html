@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Hotel-About</title>
+</head>
+<body>
+    <section class="about-section">
+        <main class="about-main">
+            <div class="about-title">
+                <h1>About</h1>
+                <div class="underline"></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, cumque.</p>
+            </div>
+            <div class="about-container">
+                <article class="about-video">
+                    <div class="preloader">
+                        <img src="preloader.gif" alt="preloader" class="preloader">
+                    </div>
+                    <video class="video-container" muted autoplay loop">
+                        <source src="./hotel_video.mp4" type="video/mp4">
+                    </video>
+                </article>
+                <article class="desc">
+                    <div class="tabDiv">
+                        <button class="tab1 active" data-id='history'>history</button>
+                        <button class="tab2" data-id='vision'>vision</button>
+                        <button class="tab3" data-id='goal'>goal</button>
+                    </div>
+                    <div class="para">
+                        <div class="content active" id="history">
+                            <h4>history</h4>
+                            <p>The hotel chain was founded by Conrad Hilton in 1919, when he bought his first property, the Mobley Hotel, in Cisco, Texas. The first hotel to bear the Hilton name was the Dallas Hilton, a high-rise that opened in Dallas, Texas in 1925.</p>
+                        </div>
+                        <div class="content" id="vision">
+                            <h4>vision</h4>
+                            <p>Our Vision is to fill the earth with the light and warmth of hospitality. Besides, our Mission is to be the first choice of guests, team members, and owners alike and see below our values. Hospitality: We're passionate about delivering exceptional guest experiences.</p>
+                        </div>
+                        <div class="content" id="goal">
+                            <h4>goal</h4>
+                            <p>Hilton also became the first major hotel company to set the goal to send zero soap to landfill and committed to doubling its investment in social impact and cutting its environmental footprint in half by 2030.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

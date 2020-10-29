@@ -1,0 +1,53 @@
+{
+    "reviews": [
+    {
+        "id": 1,
+        "name": "Ana Kim",
+        "gender": "female",
+        "image": "./img/review/review_img1.jpg",
+        "text": "Lorem ipsum dolor sit, amet consectetur g elit. Doloremque illo quo numquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    },
+    {
+        "id": 2,
+        "name": "Bob Kim",
+        "gender": "male",
+        "image": "./img/review/review_img2.jpg",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque illo quo numquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    },
+    {
+        "id": 3,
+        "name": "Clara Kim",
+        "gender": "female",
+        "image": "./img/review/review_img3.jpg",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisi numquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    },
+    {
+        "id": 4,
+        "name": "Dana Kim",
+        "gender": "male",
+        "image": "./img/review/review_img4.jpg",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque illo quo numquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    },
+    {
+        "id": 5,
+        "name": "Ethan Kim",
+        "gender": "female",
+        "image": "./img/review/review_img5.jpg",
+        "text": "Loremcing elit. Doloremque illo quo numquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    },
+    {
+        "id": 6,
+        "name": "Fine Kim",
+        "gender": "male",
+        "image": "./img/review/review_img6.png",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque illo quo numquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    },
+    {
+        "id": 7,
+        "name": "Henry Kim",
+        "gender": "female",
+        "image": "./img/review/review_img7.jpg",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipismquam quibusdam rerum ducimus vel cumque adipisci maxime a"
+    }
+]
+}
