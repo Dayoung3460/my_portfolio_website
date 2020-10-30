@@ -240,7 +240,6 @@ a {
 .countDown {
   width: 100%;
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 1em 0;
@@ -335,14 +334,19 @@ a {
 
 /******************* review page ******************/
 
+.main-review {
+  height: 100%;
+  background-color: var(--clr-grey-10);
+  display: flex;
+  justify-content: center;
+}
+
 .review-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: "Roboto", sans-serif;
-  background-color: var(--clr-grey-10);
 }
 
 .review-container .title h2 {
@@ -461,28 +465,19 @@ a {
   text-align: center;
   margin: 0 auto 1.25rem auto;
   color: var(--clr-grey-5);
+  overflow-y: auto;
 }
 
 .button-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
-}
-
-.button-container .left-btn {
-  position: absolute;
-  left: 25%;
-}
-
-.button-container .right-btn {
-  position: absolute;
-  right: 25%;
+  margin-top: 2em;
 }
 
 .button-container button {
   width: 2em;
-  margin: 0 0.3em;
   margin: 0 2em;
   border: none;
   outline: none;
