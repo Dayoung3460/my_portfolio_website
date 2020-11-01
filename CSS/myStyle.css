@@ -215,7 +215,8 @@
 
 .p1 a,
 .p2 a,
-.p3 a {
+.p3 a,
+.p4 a {
   color: inherit;
   text-decoration: none;
 }
@@ -226,7 +227,8 @@
   font-size: 1.5rem;
 }
 .p2 a p,
-.p3 a p  {
+.p3 a p,
+.p4 a p  {
   margin: 0;
   font-weight: 600;
   font-size: 1rem;
