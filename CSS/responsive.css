@@ -227,10 +227,6 @@
     height: 20rem;
   }
 
-  .p1 a p {
-    font-size: 1rem;
-  }
-
   .card-body {
     height: 10.55em;
   }
@@ -250,10 +246,6 @@
   .single-brand {
     width: 10rem;
     
-  }
-
-  .p2 a {
-    font-size: 0.9rem;
   }
 }
 

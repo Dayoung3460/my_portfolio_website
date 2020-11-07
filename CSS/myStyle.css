@@ -184,6 +184,7 @@
   border-radius: 1rem;
   text-align: center;
   margin: 2rem auto;
+  padding: 1em;
   width: 200px;
   height: 80px;
   cursor: pointer;
@@ -209,29 +210,16 @@
   justify-content: center;
 }
 
-.single-brand:hover img {
-  filter: brightness(0.2);
-}
-
 .p1 a,
 .p2 a,
 .p3 a,
-.p4 a {
+.p4 a,
+.p5 a {
   color: inherit;
   text-decoration: none;
-}
-
-.p1 a p{
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.5rem;
-}
-.p2 a p,
-.p3 a p,
-.p4 a p  {
-  margin: 0;
-  font-weight: 600;
-  font-size: 1rem;
 }
 
 /* ================Service Area ================*/
